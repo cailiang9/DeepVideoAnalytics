@@ -1,6 +1,7 @@
 FROM cailiang9/conda-gpu
 MAINTAINER Cailiang Liu <cailiang.thu@gmail.com>
 RUN apt-get update -q && apt-get install -y xz-utils
+ENV PATH=/canary/bin:$PATH
 WORKDIR "/root/"
 RUN pip install --upgrade matplotlib
 RUN wget https://yt-dl.org/downloads/latest/youtube-dl -O /bin/youtube-dl && \
